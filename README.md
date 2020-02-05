@@ -1,4 +1,4 @@
-Initial Setup of SPFx Project for Teams Tab
+**Initial Setup of SPFx Project for Teams Tab**
 
 
 1.	Create a new project directory in your favorite location. 
