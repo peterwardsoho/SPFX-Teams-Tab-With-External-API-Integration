@@ -32,3 +32,42 @@ Follow the given steps to setup SPFx project for Teams tab as below:
 15.	Next, open the Public Holiday SPFx project in Visual Studio Code.
 16.	Updating the web part manifest to make it available for Microsoft Teams.
 Locate the manifest json file for the web part you want to make available to Teams and modify the supportedHosts properties to include "TeamsTab" as in the following example.
+![](https://github.com/peterwardsoho/SPFX-Teams-Tab-With-External-API-Integration/blob/master/SupportedHosts.png)
+17.	Add the below code in the webpart.ts files
+•	import * as microsoftTeams from "@microsoft/teams-js";
+•	In a class, define a variable to store Microsoft Teams context.
+•	private _teamsContext: microsoftTeams.Context;
+•	Add the onInit() method to set the Microsoft Teams context.
+
+private _teamsContext: microsoftTeams.Context;
+  protected onInit(): Promise<any> {
+    let retVal: Promise<any> = Promise.resolve();
+    if (this.context.microsoftTeams) {
+      retVal = new Promise((resolve, reject) => {
+        this.context.microsoftTeams.getContext(context => {
+          this._teamsContext = context;
+          resolve();
+        });
+      });
+    }
+    return retVal;
+  }
+Implement External API
+
+1.	Add the below code in the webpart.ts file
+•	import { HttpClient, HttpClientResponse } from '@microsoft/sp-http';
+private _getPublicHolidayFromExternalApi(): Promise<any> {
+    return this.context.httpClient
+      .get(
+        'https://calendarific.com/api/v2/holidays?&api_key=69f7fb86d8de5f3121b5e6783b7b4fb1d2424ba7&country=us&year=' + new Date().getFullYear(),
+        HttpClient.configurations.v1
+      )
+      .then((response: HttpClientResponse) => {
+        return response.json();
+      })
+      .then(jsonResponse => {
+        return jsonResponse;
+      }) as Promise<any>;
+  }
+![](https://github.com/peterwardsoho/SPFX-Teams-Tab-With-External-API-Integration/blob/master/HTTPClient.png)
+
