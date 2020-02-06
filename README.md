@@ -200,7 +200,9 @@ private RenderPublicHolidayEntries(): void {
   }
   
     /*Table style*/
-    ```
+
+```
+
 **Deployment Process**
 
 1.	Bundle the solution run gulp bundle --ship.
