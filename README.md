@@ -48,11 +48,11 @@ private _getPublicHolidayFromExternalApi(): Promise<any> {
 ```
 **Implement jQuery, Datatable and Bootstrap for Design**
 
-1.	Install below npm packages.
-•	npm install @types/jquery@2 --save
-•	npm install @types/jqueryui --save
-•	npm install datatables.net
-•	npm install datatables.net-jqui
+1.	Install below npm packages. <br/>
+•	npm install @types/jquery@2 --save <br/>
+•	npm install @types/jqueryui --save <br/>
+•	npm install datatables.net <br/>
+•	npm install datatables.net-jqui <br/>
 •	npm install --save @types/datatables.net
 
 2.	Navigate to Config.json file under Config Folder. (Config > Config.json) and add the below code in external node.
