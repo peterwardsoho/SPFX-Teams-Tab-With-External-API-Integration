@@ -217,6 +217,7 @@ Use the App Catalog to make custom business apps available for your SharePoint O
 ![](https://github.com/peterwardsoho/SPFX-Teams-Tab-With-External-API-Integration/blob/master/DeploymentProcess.png)
 6.	Once you deploy this public-holiday.sppkg file.
 7.	Click “Sync to Teams” in files tab from the ribbon as shown below.
+![](https://github.com/peterwardsoho/SPFX-Teams-Tab-With-External-API-Integration/blob/master/SyncToTeams.png)
 8.	Once it has done open your MS Teams and navigate to the team where you wanted to add this teams tab.
 9.	Click on the + icon and a dialog will open with Add a tab title
 10.	Select the Public Holiday WebPart with your title from the list of app has and click it. It will open a new dialog box as shown below and click Save to add it.
