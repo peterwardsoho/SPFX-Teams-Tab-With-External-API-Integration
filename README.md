@@ -28,7 +28,8 @@ Locate the manifest json file for the web part you want to make available to Tea
 **Implement External API**
 
 1.	Add the below code in the webpart.ts file
-•	import { HttpClient, HttpClientResponse } from '@microsoft/sp-http';
+```
+	import { HttpClient, HttpClientResponse } from '@microsoft/sp-http';
 private _getPublicHolidayFromExternalApi(): Promise<any> {
     return this.context.httpClient
       .get(
@@ -42,6 +43,7 @@ private _getPublicHolidayFromExternalApi(): Promise<any> {
         return jsonResponse;
       }) as Promise<any>;
   }
+```
 Implement jQuery, Datatable and Bootstrap for Design
 
 1.	Install below npm packages.
