@@ -14,6 +14,7 @@
 11.	Web Part Name: PublicHoliday
 12.	Web part description: Enter the description but it is not mandatory.
 13.	Framework to use: Select No JavaScript Framework
+![](https://github.com/peterwardsoho/SPFX-Teams-Tab-With-External-API-Integration/blob/master/FrameworkToUse.png)
 14.	At this point, Yeoman installs the required dependencies and scaffolds the solution files. Creation of the solution might take a few minutes. Yeoman scaffolds the project to include your PublicHoliday web part as well.
 15.	Next, open the Public Holiday SPFx project in Visual Studio Code.
 16.	Updating the web part manifest to make it available for Microsoft Teams.
