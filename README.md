@@ -214,6 +214,7 @@ private RenderPublicHolidayEntries(): void {
 4.	Add this public-holiday.sppkg into the Appcatlog of your tenant.
 Use the App Catalog to make custom business apps available for your SharePoint Online environment.
 5.	Make sure you Check “Make this solution available to all sites in the organization” option and click on “Deploy”.
+![](https://github.com/peterwardsoho/SPFX-Teams-Tab-With-External-API-Integration/blob/master/DeploymentProcess.png)
 6.	Once you deploy this public-holiday.sppkg file.
 7.	Click “Sync to Teams” in files tab from the ribbon as shown below.
 8.	Once it has done open your MS Teams and navigate to the team where you wanted to add this teams tab.
