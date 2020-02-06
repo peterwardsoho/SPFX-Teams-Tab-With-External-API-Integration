@@ -68,6 +68,7 @@ private _getPublicHolidayFromExternalApi(): Promise<any> {
       "globalDependencies": ["jquery"]
     }
 ```
+![](https://github.com/peterwardsoho/SPFX-Teams-Tab-With-External-API-Integration/blob/master/ImplementJQueryConfig.png)
 
 3.	Add the below code in the webpart.ts file.
 •	import { SPComponentLoader } from '@microsoft/sp-loader';
