@@ -23,7 +23,9 @@ Locate the manifest json file for the web part you want to make available to Tea
 •	In a class, define a variable to store Microsoft Teams context.
 •	private _teamsContext: microsoftTeams.Context;
 •	Add the onInit() method to set the Microsoft Teams context.
-Implement External API
+
+
+**Implement External API**
 
 1.	Add the below code in the webpart.ts file
 •	import { HttpClient, HttpClientResponse } from '@microsoft/sp-http';
