@@ -19,6 +19,7 @@
 15.	Next, open the Public Holiday SPFx project in Visual Studio Code.
 16.	Updating the web part manifest to make it available for Microsoft Teams.
 Locate the manifest json file for the web part you want to make available to Teams and modify the supportedHosts properties to include "TeamsTab" as in the following example.
+![](https://github.com/peterwardsoho/SPFX-Teams-Tab-With-External-API-Integration/blob/master/SupportedHosts.png)
 17.	Add the below code in the webpart.ts files
 •	import * as microsoftTeams from "@microsoft/teams-js";
 •	In a class, define a variable to store Microsoft Teams context.
