@@ -44,7 +44,7 @@ private _getPublicHolidayFromExternalApi(): Promise<any> {
       }) as Promise<any>;
   }
 ```
-***Implement jQuery, Datatable and Bootstrap for Design***
+**Implement jQuery, Datatable and Bootstrap for Design**
 
 1.	Install below npm packages.
 •	npm install @types/jquery@2 --save
