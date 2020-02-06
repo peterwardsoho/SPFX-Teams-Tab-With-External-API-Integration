@@ -70,11 +70,11 @@ private _getPublicHolidayFromExternalApi(): Promise<any> {
 ```
 ![](https://github.com/peterwardsoho/SPFX-Teams-Tab-With-External-API-Integration/blob/master/ImplementJQueryConfig.png)
 
-3.	Add the below code in the webpart.ts file.
-•	import { SPComponentLoader } from '@microsoft/sp-loader';
-•	import 'jquery';
-•	import 'DataTables.net';
-•	require('bootstrap');
+3.	Add the below code in the webpart.ts file. <br/>
+•	import { SPComponentLoader } from '@microsoft/sp-loader';<br/>
+•	import 'jquery';<br/>
+•	import 'DataTables.net';<br/>
+•	require('bootstrap');<br/>
 •	Update render() method as below.
 
 ```
