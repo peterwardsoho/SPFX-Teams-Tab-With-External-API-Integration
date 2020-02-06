@@ -54,12 +54,27 @@ Implement jQuery, Datatable and Bootstrap for Design
 •	npm install --save @types/datatables.net
 
 2.	Navigate to Config.json file under Config Folder. (Config > Config.json) and add the below code in external node.
+
+```
+"jquery": {
+      "path": "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+      "globalName": "jquery"
+    },
+    "bootstrap": {
+      "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": ["jquery"]
+    }
+```
+
 3.	Add the below code in the webpart.ts file.
 •	import { SPComponentLoader } from '@microsoft/sp-loader';
 •	import 'jquery';
 •	import 'DataTables.net';
 •	require('bootstrap');
 •	Update render() method as below.
+
+```
 public render(): void {
     SPComponentLoader.loadCss("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
     SPComponentLoader.loadCss("https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css");
@@ -84,7 +99,10 @@ public render(): void {
       </div>`;
       this.RenderPublicHolidayEntries();
   }
+  ```
+
 •	Add the below RenderPublicHolidayEntries() method in webpart.ts file.
+```
 private RenderPublicHolidayEntries(): void {
     this.context.statusRenderer.displayLoadingIndicator(document.getElementById("tblPublicHolidays"),"Please wait...");
     var holidaysData = [];
@@ -136,15 +154,21 @@ private RenderPublicHolidayEntries(): void {
       this.context.statusRenderer.clearLoadingIndicator(document.getElementById("tblPublicHolidays"));
     });
   }
+  ```
+  
 
 •	Add the below style for table in WebPart.module.scss file.
+
+```
 .container {
     width: 100%;
     margin: 0px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
     border-radius: 4px;
   }
+```
 
+```
 /*Table style*/
 
   .publicHolidayTable {
@@ -176,6 +200,7 @@ private RenderPublicHolidayEntries(): void {
   }
   
     /*Table style*/
+    ```
 **Deployment Process**
 
 1.	Bundle the solution run gulp bundle --ship.
